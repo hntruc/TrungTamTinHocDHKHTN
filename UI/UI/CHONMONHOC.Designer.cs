@@ -144,9 +144,11 @@
             this.MAHP,
             this.MAHPCB,
             this.TENHPCB});
+            this.danhSachHocPhanChon.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.danhSachHocPhanChon.Location = new System.Drawing.Point(38, 911);
             this.danhSachHocPhanChon.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.danhSachHocPhanChon.Name = "danhSachHocPhanChon";
+            this.danhSachHocPhanChon.ReadOnly = true;
             this.danhSachHocPhanChon.RowHeadersWidth = 123;
             this.danhSachHocPhanChon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.danhSachHocPhanChon.Size = new System.Drawing.Size(2305, 549);
@@ -158,60 +160,70 @@
             this.TENMHS.HeaderText = "Tên môn học";
             this.TENMHS.MinimumWidth = 15;
             this.TENMHS.Name = "TENMHS";
+            this.TENMHS.ReadOnly = true;
             // 
             // TENGV
             // 
             this.TENGV.HeaderText = "Tên giáo viên";
             this.TENGV.MinimumWidth = 15;
             this.TENGV.Name = "TENGV";
+            this.TENGV.ReadOnly = true;
             // 
             // SISO
             // 
             this.SISO.HeaderText = "Sỉ số";
             this.SISO.MinimumWidth = 15;
             this.SISO.Name = "SISO";
+            this.SISO.ReadOnly = true;
             // 
             // GIA
             // 
             this.GIA.HeaderText = "Giá";
             this.GIA.MinimumWidth = 15;
             this.GIA.Name = "GIA";
+            this.GIA.ReadOnly = true;
             // 
             // NAMHOC
             // 
             this.NAMHOC.HeaderText = "Năm học";
             this.NAMHOC.MinimumWidth = 15;
             this.NAMHOC.Name = "NAMHOC";
+            this.NAMHOC.ReadOnly = true;
             // 
             // HOCKY
             // 
             this.HOCKY.HeaderText = "Học kỳ";
             this.HOCKY.MinimumWidth = 15;
             this.HOCKY.Name = "HOCKY";
+            this.HOCKY.ReadOnly = true;
             // 
             // TIET
             // 
             this.TIET.HeaderText = "Tiết";
             this.TIET.MinimumWidth = 15;
             this.TIET.Name = "TIET";
+            this.TIET.ReadOnly = true;
             // 
             // NGAY
             // 
             this.NGAY.HeaderText = "Ngày học";
             this.NGAY.MinimumWidth = 15;
             this.NGAY.Name = "NGAY";
+            this.NGAY.ReadOnly = true;
             // 
             // LOAIHP
             // 
             this.LOAIHP.HeaderText = "Loại học phần";
             this.LOAIHP.MinimumWidth = 15;
             this.LOAIHP.Name = "LOAIHP";
+            this.LOAIHP.ReadOnly = true;
             // 
             // MAHP
             // 
             this.MAHP.HeaderText = "Mã học phần";
             this.MAHP.MinimumWidth = 15;
             this.MAHP.Name = "MAHP";
+            this.MAHP.ReadOnly = true;
             this.MAHP.Visible = false;
             // 
             // MAHPCB
@@ -219,6 +231,7 @@
             this.MAHPCB.HeaderText = "Mã học phần cơ bản";
             this.MAHPCB.MinimumWidth = 15;
             this.MAHPCB.Name = "MAHPCB";
+            this.MAHPCB.ReadOnly = true;
             this.MAHPCB.Visible = false;
             // 
             // TENHPCB
@@ -226,6 +239,7 @@
             this.TENHPCB.HeaderText = "Tên học phần cơ bản";
             this.TENHPCB.MinimumWidth = 15;
             this.TENHPCB.Name = "TENHPCB";
+            this.TENHPCB.ReadOnly = true;
             // 
             // danhSachHocPhan
             // 
@@ -234,6 +248,7 @@
             this.danhSachHocPhan.AllowUserToResizeRows = false;
             this.danhSachHocPhan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.danhSachHocPhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.danhSachHocPhan.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.danhSachHocPhan.Location = new System.Drawing.Point(38, 211);
             this.danhSachHocPhan.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.danhSachHocPhan.Name = "danhSachHocPhan";
