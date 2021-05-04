@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dangkyBtn = new System.Windows.Forms.Button();
+            this.inphieudangkyBtn = new System.Windows.Forms.Button();
             this.hotenLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,16 +52,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.danhSachHocPhan)).BeginInit();
             this.SuspendLayout();
             // 
-            // dangkyBtn
+            // inphieudangkyBtn
             // 
-            this.dangkyBtn.ForeColor = System.Drawing.Color.Maroon;
-            this.dangkyBtn.Location = new System.Drawing.Point(2017, 1540);
-            this.dangkyBtn.Name = "dangkyBtn";
-            this.dangkyBtn.Size = new System.Drawing.Size(326, 131);
-            this.dangkyBtn.TabIndex = 1;
-            this.dangkyBtn.Text = "In phiếu đăng ký";
-            this.dangkyBtn.UseVisualStyleBackColor = true;
-            this.dangkyBtn.Click += new System.EventHandler(this.dangkyBtn_Click);
+            this.inphieudangkyBtn.ForeColor = System.Drawing.Color.Maroon;
+            this.inphieudangkyBtn.Location = new System.Drawing.Point(2017, 1540);
+            this.inphieudangkyBtn.Name = "inphieudangkyBtn";
+            this.inphieudangkyBtn.Size = new System.Drawing.Size(326, 131);
+            this.inphieudangkyBtn.TabIndex = 1;
+            this.inphieudangkyBtn.Text = "In phiếu đăng ký";
+            this.inphieudangkyBtn.UseVisualStyleBackColor = true;
+            this.inphieudangkyBtn.Click += new System.EventHandler(this.inphieudangkyBtn_Click);
             // 
             // hotenLabel
             // 
@@ -271,7 +271,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.hotenLabel);
-            this.Controls.Add(this.dangkyBtn);
+            this.Controls.Add(this.inphieudangkyBtn);
             this.Controls.Add(this.danhSachHocPhan);
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "CHONMONHOC";
@@ -286,7 +286,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button dangkyBtn;
+        private System.Windows.Forms.Button inphieudangkyBtn;
         private System.Windows.Forms.Label hotenLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

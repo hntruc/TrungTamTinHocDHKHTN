@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.hvmBtn = new System.Windows.Forms.Button();
-            this.hvcBtn = new System.Windows.Forms.Button();
+            this.HOCVIENMOI = new System.Windows.Forms.Button();
+            this.HOCVIENCU = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // hvmBtn
+            // HOCVIENMOI
             // 
-            this.hvmBtn.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.hvmBtn.Location = new System.Drawing.Point(253, 77);
-            this.hvmBtn.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.hvmBtn.Name = "hvmBtn";
-            this.hvmBtn.Size = new System.Drawing.Size(339, 176);
-            this.hvmBtn.TabIndex = 0;
-            this.hvmBtn.Text = "Học viên mới";
-            this.hvmBtn.UseVisualStyleBackColor = true;
-            this.hvmBtn.Click += new System.EventHandler(this.hvmBtn_Click);
+            this.HOCVIENMOI.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.HOCVIENMOI.Location = new System.Drawing.Point(253, 77);
+            this.HOCVIENMOI.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.HOCVIENMOI.Name = "HOCVIENMOI";
+            this.HOCVIENMOI.Size = new System.Drawing.Size(339, 176);
+            this.HOCVIENMOI.TabIndex = 0;
+            this.HOCVIENMOI.Text = "Học viên mới";
+            this.HOCVIENMOI.UseVisualStyleBackColor = true;
+            this.HOCVIENMOI.Click += new System.EventHandler(this.HOCVIENMOI_Click);
             // 
-            // hvcBtn
+            // HOCVIENCU
             // 
-            this.hvcBtn.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.hvcBtn.Location = new System.Drawing.Point(253, 313);
-            this.hvcBtn.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.hvcBtn.Name = "hvcBtn";
-            this.hvcBtn.Size = new System.Drawing.Size(339, 176);
-            this.hvcBtn.TabIndex = 1;
-            this.hvcBtn.Text = "Học viên cũ";
-            this.hvcBtn.UseVisualStyleBackColor = true;
-            this.hvcBtn.Click += new System.EventHandler(this.hvcBtn_Click);
+            this.HOCVIENCU.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.HOCVIENCU.Location = new System.Drawing.Point(253, 313);
+            this.HOCVIENCU.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.HOCVIENCU.Name = "HOCVIENCU";
+            this.HOCVIENCU.Size = new System.Drawing.Size(339, 176);
+            this.HOCVIENCU.TabIndex = 1;
+            this.HOCVIENCU.Text = "Học viên cũ";
+            this.HOCVIENCU.UseVisualStyleBackColor = true;
+            this.HOCVIENCU.Click += new System.EventHandler(this.HOCVIENCU_Click);
             // 
             // backBtn
             // 
@@ -72,16 +72,16 @@
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // registerSubjectOption
+            // CHONLOAIHOCVIEN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 694);
             this.Controls.Add(this.backBtn);
-            this.Controls.Add(this.hvcBtn);
-            this.Controls.Add(this.hvmBtn);
+            this.Controls.Add(this.HOCVIENCU);
+            this.Controls.Add(this.HOCVIENMOI);
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.Name = "registerSubjectOption";
+            this.Name = "CHONLOAIHOCVIEN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHỌN LOẠI HỌC VIÊN";
             this.ResumeLayout(false);
@@ -91,8 +91,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button hvmBtn;
-        private System.Windows.Forms.Button hvcBtn;
+        private System.Windows.Forms.Button HOCVIENMOI;
+        private System.Windows.Forms.Button HOCVIENCU;
         private System.Windows.Forms.Button backBtn;
     }
 }

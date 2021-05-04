@@ -35,45 +35,5 @@ namespace UI
                 return kqhp;
             }
         }
-
-        static public int KIEMTRAHV(string mahv)
-        {
-            try
-            {
-                Connect c = new Connect();
-                SqlCommand cmd = new SqlCommand("KIEMTRAHVTONTAI", c.conn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@MAHV", mahv));
-                var check = cmd.Parameters.Add("@RES", System.Data.SqlDbType.Int);
-                check.Direction = System.Data.ParameterDirection.ReturnValue;
-                cmd.ExecuteNonQuery();
-
-                return Int32.Parse(check.Value.ToString());
-            }
-            catch
-            {
-                return 0;
-            }
-        }
-
-        static public int KIEMTRAHP(string mahp)
-        {
-            try
-            {
-                Connect c = new Connect();
-                SqlCommand cmd = new SqlCommand("KIEMTRAHPTONTAI", c.conn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@MAHP", mahp));
-                var check = cmd.Parameters.Add("@RES", System.Data.SqlDbType.Int);
-                check.Direction = System.Data.ParameterDirection.ReturnValue;
-                cmd.ExecuteNonQuery();
-
-                return Int32.Parse(check.Value.ToString());
-            }
-            catch
-            {
-                return 0;
-            }
-        }
     }
 }

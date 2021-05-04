@@ -42,5 +42,25 @@ namespace UI
             return listSubject;
 
         }
+
+        static public int KIEMTRAHP(string mahp)
+        {
+            try
+            {
+                Connect c = new Connect();
+                SqlCommand cmd = new SqlCommand("KIEMTRAHPTONTAI", c.conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@MAHP", mahp));
+                var check = cmd.Parameters.Add("@RES", System.Data.SqlDbType.Int);
+                check.Direction = System.Data.ParameterDirection.ReturnValue;
+                cmd.ExecuteNonQuery();
+
+                return Int32.Parse(check.Value.ToString());
+            }
+            catch
+            {
+                return 0;
+            }
+        }
     }
 }

@@ -22,18 +22,25 @@ namespace UI
 
         private void dangkyBtn_Click(object sender, EventArgs e)
         {
-            HocVien hv = new HocVien(cmndText.Text, hotenText.Text,diachiText.Text, sdtText.Text, emailText.Text);
-            int flag = HocVien.LuuHocVien(hv);
-            if (flag != 0)
+            if (HocVien.KiemTraCMND(cmndText.Text) == 0)
             {
-                mahv = HocVien.LayMaHocVien(cmndText.Text.ToString());
-                CHONMONHOC so = new CHONMONHOC();
-                so.receive_mahv(mahv);
-                so.Show();
-                this.Hide();
+                HocVien hv = new HocVien(cmndText.Text, hotenText.Text, diachiText.Text, sdtText.Text, emailText.Text);
+                int flag = HocVien.LuuHocVien(hv);
+                if (flag != 0)
+                {
+                    mahv = HocVien.LayMaHocVien(cmndText.Text.ToString());
+                    CHONMONHOC so = new CHONMONHOC();
+                    so.receive_mahv(mahv);
+                    so.Show();
+                    this.Hide();
+                }
+                else
+                    MessageBox.Show("Thêm học viên không thành công.");
             }
             else
-                MessageBox.Show("Thêm học viên không thành công.");
+            {
+                MessageBox.Show("CMND đã tồn tại!");
+            }
         }
 
         private void backBtn_Click(object sender, EventArgs e)

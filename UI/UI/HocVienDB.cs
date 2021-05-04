@@ -48,5 +48,38 @@ namespace UI
             c.Disconnect();
             return res_mahv;
         }
+
+        static public int KIEMTRAHV(string mahv)
+        {
+            try
+            {
+                Connect c = new Connect();
+                SqlCommand cmd = new SqlCommand("KIEMTRAHVTONTAI", c.conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@MAHV", mahv));
+                var check = cmd.Parameters.Add("@RES", System.Data.SqlDbType.Int);
+                check.Direction = System.Data.ParameterDirection.ReturnValue;
+                cmd.ExecuteNonQuery();
+
+                return Int32.Parse(check.Value.ToString());
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        static public int KiemTraCMND(string cmnd)
+        {
+                Connect c = new Connect();
+                SqlCommand cmd = new SqlCommand("KIEMTRACMND", c.conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@cmnd", cmnd));
+                var check = cmd.Parameters.Add("@RES", System.Data.SqlDbType.Int);
+                check.Direction = System.Data.ParameterDirection.ReturnValue;
+                cmd.ExecuteNonQuery();
+
+                return Int32.Parse(check.Value.ToString());
+        }
     }
 }

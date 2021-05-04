@@ -1,3 +1,4 @@
+﻿
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,13 @@ namespace UI
         public void receive_mahv(string a)
         {
             mahv_text = a;
+        }
+        private void inphieudangkyBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đăng ký thành công!");
+            MENU_TIEPNHAN n = new MENU_TIEPNHAN();
+            n.Show();
+            this.Hide();
         }
 
         void FillDataGridView()
@@ -81,8 +89,13 @@ namespace UI
             if (danhSachHocPhanChon.CurrentRow.Index != -1)
             {
                 int row = danhSachHocPhanChon.CurrentRow.Index;
-                DangKy.XOAHOCPHAN(chose_list[row].mahp, chose_list[row].namhoc, chose_list[row].hocky, hotenLabel.Text);
+                MessageBox.Show("mahp " + chose_list[row].mahp);
+                MessageBox.Show("namhoc " + chose_list[row].namhoc);
+                MessageBox.Show("hocky " + chose_list[row].hocky);
+                MessageBox.Show("hoten " + hotenLabel.Text);
+                DangKy.XOAHOCPHAN(chose_list[row].mahp, chose_list[row].namhoc, Int32.Parse(chose_list[row].hocky.ToString()), hotenLabel.Text);
                 danhSachHocPhanChon.Rows.RemoveAt(row);
+                chose_list.RemoveAt(row);
                 FillDataGridView();
             }
         }
@@ -202,7 +215,7 @@ namespace UI
                                 LOGIN.username,
                                 date);
                             int check = DangKy.THEMHOCPHANHVM(dkdb);
-                  
+
                             if (check == 1)
                             {
                                 int rowId = danhSachHocPhanChon.Rows.Add();

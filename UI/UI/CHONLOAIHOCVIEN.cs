@@ -17,13 +17,6 @@ namespace UI
             InitializeComponent();
         }
 
-        private void hvmBtn_Click(object sender, EventArgs e)
-        {
-            DANGKYHOCPHANHOCVIENMOI hvm = new DANGKYHOCPHANHOCVIENMOI();
-            hvm.Show();
-            this.Dispose();
-        }
-
         private void backBtn_Click(object sender, EventArgs e)
         {
             MENU_TIEPNHAN hv = new MENU_TIEPNHAN();
@@ -31,7 +24,14 @@ namespace UI
             this.Close();
         }
 
-        private void hvcBtn_Click(object sender, EventArgs e)
+        private void HOCVIENMOI_Click(object sender, EventArgs e)
+        {
+            DANGKYHOCPHANHOCVIENMOI hvm = new DANGKYHOCPHANHOCVIENMOI();
+            hvm.Show();
+            this.Dispose();
+        }
+
+        private void HOCVIENCU_Click(object sender, EventArgs e)
         {
             DANGKYHOCPHANHOCVIENCU hvc = new DANGKYHOCPHANHOCVIENCU();
             hvc.Show();

@@ -36,7 +36,7 @@ namespace UI
         }
         public static int KIEMTRAHV(string mahv)
         {
-            int check = KetQuaHocPhanDB.KIEMTRAHV(mahv);
+            int check = HocVienDB.KIEMTRAHV(mahv);
             if (check == 1)
             {
                 return 1;
@@ -46,7 +46,7 @@ namespace UI
         }
         public static int KIEMTRAHP(string mahp)
         {
-            int check = KetQuaHocPhanDB.KIEMTRAHP(mahp);
+            int check = HocPhanMoDB.KIEMTRAHP(mahp);
             if (check == 1)
             {
                 return 1;

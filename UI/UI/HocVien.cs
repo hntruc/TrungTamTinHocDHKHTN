@@ -33,5 +33,10 @@ namespace UI
         {
             return HocVienDB.LayMaHocVien(cmnd);
         }
+
+        static public int KiemTraCMND(string cmnd)
+        {
+            return HocVienDB.KiemTraCMND(cmnd);
+        }
     }
 }

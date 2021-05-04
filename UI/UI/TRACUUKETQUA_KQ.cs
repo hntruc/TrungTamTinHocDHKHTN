@@ -42,6 +42,7 @@ namespace UI
         private void searchResult_Load(object sender, EventArgs e)
         {
             KetQuaHocPhan kqhp = KetQuaHocPhan.XEMKETQUA(mhv,mhp);
+ 
             this.dataGridView1.Rows.Add(kqhp.mahp, kqhp.tenhp, kqhp.mahv, kqhp.tenhv, kqhp.namhoc, kqhp.hocky, kqhp.diemhocphan, kqhp.ngay);
             if (kqhp.diemhocphan >= 5)
             { 

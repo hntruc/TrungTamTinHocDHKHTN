@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.COCHUNGCHICOBAN = new System.Windows.Forms.Label();
             this.yes = new System.Windows.Forms.RadioButton();
             this.no = new System.Windows.Forms.RadioButton();
             this.xacnhan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // COCHUNGCHICOBAN
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Có chứng chỉ cơ bản:";
+            this.COCHUNGCHICOBAN.AutoSize = true;
+            this.COCHUNGCHICOBAN.Location = new System.Drawing.Point(65, 41);
+            this.COCHUNGCHICOBAN.Name = "COCHUNGCHICOBAN";
+            this.COCHUNGCHICOBAN.Size = new System.Drawing.Size(320, 37);
+            this.COCHUNGCHICOBAN.TabIndex = 0;
+            this.COCHUNGCHICOBAN.Text = "Có chứng chỉ cơ bản:";
             // 
             // yes
             // 
@@ -83,7 +83,7 @@
             this.Controls.Add(this.xacnhan);
             this.Controls.Add(this.no);
             this.Controls.Add(this.yes);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.COCHUNGCHICOBAN);
             this.Name = "NHAPTHONGTINHOCPHANCOBAN";
             this.Text = "XÁC NHẬN HỌC PHẦN CƠ BẢN TRƯỚC";
             this.ResumeLayout(false);
@@ -93,7 +93,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label COCHUNGCHICOBAN;
         private System.Windows.Forms.RadioButton yes;
         private System.Windows.Forms.RadioButton no;
         private System.Windows.Forms.Button xacnhan;
