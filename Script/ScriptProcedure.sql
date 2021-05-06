@@ -1,4 +1,4 @@
-USE TTTH;
+﻿USE TTTH;
 GO
 
 -- Proc themhocvien
@@ -215,3 +215,86 @@ BEGIN
 	END
 END
 GO
+
+
+
+------Tấn làm xem ds giáo viên + Xếp phòng---------------------------------------------------------------------
+
+--Xem danh sách giáo viên
+if object_id('Proc_XemDSGV', 'P') is not null
+drop proc Proc_XemDSGV
+go
+create proc Proc_XemDSGV
+as
+	select * from giaovien;
+go
+exec Proc_XemDSGV
+
+
+--Xếp phòng
+if object_id('Proc_XepPhong', 'P') is not null
+drop proc Proc_XepPhong
+go
+create proc Proc_XepPhong
+	@mahp char(4),
+	@namhoc char(4),
+	@hocky int,
+	@tenphonghoc nvarchar(100)
+as
+	if exists(select * from chitietphonghoc 
+			  where @mahp = mahp and @namhoc = namhoc and @hocky = hocky and @tenphonghoc = tenphonghoc)
+	begin
+		print('Trung');
+	end
+
+	insert into chitietphonghoc(mahp, namhoc, hocky, tenphonghoc) values (@mahp, @namhoc, @hocky, @tenphonghoc);
+go
+
+--exec Proc_XepPhong 'HP01','2021',2,'I21'
+
+
+
+---Ân : đăng ký thi chứng chỉ quốc tế---------------------------------------------------------------------
+if object_id('DANGKYTHICCQT_KHAC ', 'P') is not null
+drop proc DANGKYTHICCQT_KHAC 
+go
+create proc DANGKYTHICCQT_KHAC 
+	@CMND VARCHAR(12),
+	@HOTEN NVARCHAR(30),
+	@DIACHI NVARCHAR(100),
+	@SDT VARCHAR(12),
+	@EMAIL VARCHAR(100),
+	@MACCQT VARCHAR(4),
+	@DOTTHI VARCHAR(30)
+AS
+	INSERT INTO NGUOITHAMGIA VALUES (@CMND);
+	INSERT INTO DOITUONGKHAC VALUES(@CMND,@HOTEN,@DIACHI,@SDT,@EMAIL);
+
+	DECLARE @NGAYLAP VARCHAR(20)=GETDATE()
+	DECLARE @N CHAR(2) = (SELECT COUNT(*)+1 FROM HD_CHUNGCHI);
+	DECLARE @MAHD CHAR(4) = CONCAT('HC',@N);
+	DECLARE @GIACHUNGCHI FLOAT = (SELECT PHICAPCHUNGCHI + LEPHITHI FROM CHUNGCHIQUOCTE WHERE MACCQT=@MACCQT)
+	INSERT INTO HD_CHUNGCHI VALUES(@MAHD,@CMND,NULL,@GIACHUNGCHI,@NGAYLAP,NULL);
+	INSERT INTO CTHD_CHUNGCHI VALUES (@MACCQT, @MAHD, @GIACHUNGCHI);
+	INSERT INTO PHIEUDUTHI VALUES (@CMND, @MACCQT, @MAHD, @DOTTHI,N'CƠ SỞ NGUYỄN VĂN CỪ');
+
+GO
+if object_id('DANGKYTHICCQT_HV ', 'P') is not null
+drop proc DANGKYTHICCQT_HV 
+go
+CREATE PROC DANGKYTHICCQT_HV
+	@MAHV CHAR(4),
+	@HOTEN NVARCHAR(50),
+	@CMND VARCHAR(12),
+	@MACCQT VARCHAR(4),
+	@DOTTHI VARCHAR(30)
+AS
+
+	DECLARE @NGAYLAP VARCHAR(20)=GETDATE()
+	DECLARE @N CHAR(2) = (SELECT COUNT(*)+1 FROM HD_CHUNGCHI);
+	DECLARE @MAHD CHAR(4) = CONCAT('HC',@N);
+	DECLARE @GIACHUNGCHI FLOAT = (SELECT PHICAPCHUNGCHI + LEPHITHI FROM CHUNGCHIQUOCTE WHERE MACCQT=@MACCQT)
+	INSERT INTO HD_CHUNGCHI VALUES(@MAHD,@CMND,NULL,0.9*@GIACHUNGCHI,@NGAYLAP,NULL);
+	INSERT INTO CTHD_CHUNGCHI VALUES (@MACCQT, @MAHD, 0.9*@GIACHUNGCHI);
+	INSERT INTO PHIEUDUTHI VALUES (@CMND, @MACCQT, @MAHD, @DOTTHI,N'CƠ SỞ NGUYỄN VĂN CỪ');
+go
