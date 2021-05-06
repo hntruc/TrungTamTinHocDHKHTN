@@ -37,5 +37,10 @@ namespace UI
             n.Show();
             this.Close();
         }
+
+        private void DANGKYTHICCQT_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

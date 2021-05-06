@@ -36,9 +36,10 @@
             // hv_btn
             // 
             this.hv_btn.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.hv_btn.Location = new System.Drawing.Point(296, 70);
+            this.hv_btn.Location = new System.Drawing.Point(140, 38);
+            this.hv_btn.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.hv_btn.Name = "hv_btn";
-            this.hv_btn.Size = new System.Drawing.Size(473, 226);
+            this.hv_btn.Size = new System.Drawing.Size(224, 122);
             this.hv_btn.TabIndex = 0;
             this.hv_btn.Text = "HỌC VIÊN";
             this.hv_btn.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // dtk_btn
             // 
             this.dtk_btn.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.dtk_btn.Location = new System.Drawing.Point(296, 422);
+            this.dtk_btn.Location = new System.Drawing.Point(140, 228);
+            this.dtk_btn.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.dtk_btn.Name = "dtk_btn";
-            this.dtk_btn.Size = new System.Drawing.Size(473, 226);
+            this.dtk_btn.Size = new System.Drawing.Size(224, 122);
             this.dtk_btn.TabIndex = 1;
             this.dtk_btn.Text = "ĐỐI TƯỢNG KHÁC";
             this.dtk_btn.UseVisualStyleBackColor = true;
@@ -61,27 +63,30 @@
             this.backBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.backBtn.BackColor = System.Drawing.SystemColors.Info;
             this.backBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBtn.Location = new System.Drawing.Point(39, 758);
+            this.backBtn.Location = new System.Drawing.Point(18, 410);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(84, 73);
+            this.backBtn.Size = new System.Drawing.Size(64, 56);
             this.backBtn.TabIndex = 23;
             this.backBtn.Text = "⬅";
             this.backBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // registerInternationalOption
+            // DANGKYTHICCQT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1083, 939);
+            this.ClientSize = new System.Drawing.Size(513, 508);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.dtk_btn);
             this.Controls.Add(this.hv_btn);
-            this.Name = "registerInternationalOption";
+            this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.Name = "DANGKYTHICCQT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG KÝ THI CHỨNG CHỈ QUỐC TẾ";
+            this.Load += new System.EventHandler(this.DANGKYTHICCQT_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
