@@ -54,6 +54,18 @@
     </Compile>
     <Compile Include="DangKy.cs" />
     <Compile Include="DangKyDB.cs" />
+    <Compile Include="fXemDSGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fXemDSGV.Designer.cs">
+      <DependentUpon>fXemDSGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fXepPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fXepPhong.Designer.cs">
+      <DependentUpon>fXepPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="MENU_BOPHANVANPHONG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +197,12 @@
     </Compile>
     <EmbeddedResource Include="CUNGCAPTHONGTINCONGTY.resx">
       <DependentUpon>CUNGCAPTHONGTINCONGTY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fXemDSGV.resx">
+      <DependentUpon>fXemDSGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fXepPhong.resx">
+      <DependentUpon>fXepPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU_BOPHANVANPHONG.resx">
       <DependentUpon>MENU_BOPHANVANPHONG.cs</DependentUpon>

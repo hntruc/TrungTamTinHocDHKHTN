@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI;
 
 namespace UI
 {
@@ -31,6 +32,23 @@ namespace UI
             MENU_BOPHANVANPHONG b = new MENU_BOPHANVANPHONG();
             b.Show();
             this.Hide();
+        }
+
+        
+
+        private void xn_btn_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

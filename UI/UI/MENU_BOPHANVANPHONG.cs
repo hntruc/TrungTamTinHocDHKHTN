@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI;
 
 namespace UI
 {
@@ -19,15 +20,15 @@ namespace UI
 
         private void xp_btn_Click(object sender, EventArgs e)
         {
-            XEPPHONG x = new XEPPHONG();
-            x.Show();
+            fXepPhong f = new fXepPhong();
+            f.Show();
             this.Close();
         }
 
         private void lhgv_btn_Click(object sender, EventArgs e)
         {
-            TIMGIAOVIENLIENLAC l = new TIMGIAOVIENLIENLAC();
-            l.Show();
+            fXemDSGV f = new fXemDSGV();
+            f.Show();
             this.Close();
         }
 
