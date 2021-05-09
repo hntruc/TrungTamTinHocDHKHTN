@@ -25,23 +25,9 @@ namespace UI
             this.Dispose();
         }
 
-        void Proc_luuhoadon()
-        {
-            DataProvider provider = new DataProvider();
-            string query = "EXEC INHOADONCONGTY @masothue, @mahv, @tencongty";
-            provider.ExecuteProc(query, new object[] { textBox4.Text, textBox3.Text, textBox1.Text });
-        }
-
-
         private void luu_btn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("In hóa đơn thành công");
-            Proc_luuhoadon();
-
-            MENU_KETOAN m = new MENU_KETOAN();
-            m.Show();
-            this.Dispose();
-
+            
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -49,11 +35,6 @@ namespace UI
             MENU_KETOAN m = new MENU_KETOAN();
             m.Show();
             this.Dispose();
-        }
-
-        private void CUNGCAPTHONGTINCONGTY_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

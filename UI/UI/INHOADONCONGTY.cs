@@ -30,10 +30,5 @@ namespace UI
             m.Show();
             this.Dispose();
         }
-
-        private void INHOADONCONGTY_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
