@@ -37,17 +37,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(148, 63);
+            this.label2.Location = new System.Drawing.Point(47, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(591, 64);
+            this.label2.Size = new System.Drawing.Size(204, 24);
             this.label2.TabIndex = 18;
             this.label2.Text = "In hóa đơn cho công ty";
             // 
             // yes_btn
             // 
-            this.yes_btn.Location = new System.Drawing.Point(159, 176);
+            this.yes_btn.Location = new System.Drawing.Point(50, 62);
+            this.yes_btn.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.yes_btn.Name = "yes_btn";
-            this.yes_btn.Size = new System.Drawing.Size(251, 111);
+            this.yes_btn.Size = new System.Drawing.Size(79, 39);
             this.yes_btn.TabIndex = 19;
             this.yes_btn.Text = "Có";
             this.yes_btn.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // no_btn
             // 
-            this.no_btn.Location = new System.Drawing.Point(488, 176);
+            this.no_btn.Location = new System.Drawing.Point(154, 62);
+            this.no_btn.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.no_btn.Name = "no_btn";
-            this.no_btn.Size = new System.Drawing.Size(251, 111);
+            this.no_btn.Size = new System.Drawing.Size(79, 39);
             this.no_btn.TabIndex = 20;
             this.no_btn.Text = "Không";
             this.no_btn.UseVisualStyleBackColor = true;
@@ -65,15 +68,17 @@
             // 
             // INHOADONCONGTY
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 377);
+            this.ClientSize = new System.Drawing.Size(284, 132);
             this.Controls.Add(this.no_btn);
             this.Controls.Add(this.yes_btn);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "INHOADONCONGTY";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LỰA CHỌN IN";
+            this.Load += new System.EventHandler(this.INHOADONCONGTY_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
